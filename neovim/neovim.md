@@ -1,3 +1,15 @@
+---
+title: neovim 
+slug: nvim 
+tag:
+    - neovim 
+    - linux
+category:
+    - Linux 
+status: publish
+thumbnail: images/8.jpg
+---
+
 ## Install
 ```bash
 cd /usr/local/bin

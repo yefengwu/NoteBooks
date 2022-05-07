@@ -1,14 +1,13 @@
 ---
 title: Python自动发布markdown文章到WordPress网站
-date: 2018-09-27 16:57
-url: Python-auto-publish-markdown-post-to-WordPress
-slug: test
+slug: auto 
 tag: 
     - "wordpress"
     - "python"
-category: 博客
+category: 
+    - "python"
 status: publish
-thumbnail: "./test.jpg"
+thumbnail: "images/5.jpg"
 ---
 
 

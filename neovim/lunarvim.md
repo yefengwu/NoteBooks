@@ -1,12 +1,16 @@
 ---
-title: "lunarvim shortkeys"
-slug: test
-tag: 
-    - "wordpress"
-    - "python"
-category: 博客
+title: Lunarvim
+slug: lvim 
+tag:
+    - neovim
+    - Linux
+category:
+    - Linux
 status: publish
-thumbnail: "./test.jpg"
+thumbnail: images/7.jpg
+---
+
+
 ---
 | 命令                       | 描述                    |
 |----------------------------|-------------------------|

@@ -1,16 +1,24 @@
-# python-markdown
+---
+title: python-markdown
+slug: python 
+tag:
+    - python 
+    - markdown 
+category:
+    - Python 
+status: publish
+thumbnail: images/3.jpg
+---
 
 > python-markdown 介绍安装基本用法生态markdown.extensions.tocmarkdown.extensions.fenced_codemarkdown.extensions.
 
 ## 介绍
 `python-markdown` 这个库可以把 markdown 转化为 html ，拥有用起来方便、第三方拓展多、自定义性高等优点。
-![markdown](https://sqlpy.com/static/2020-15/markdown.png)
-
 
 ## 安装
 直接通过 pip 来安装 [Markdown](https://pypi.org/project/Markdown/)。
 
-```
+```python
 pip3 install Markdown
 
 Looking in indexes: https://mirrors.cloud.tencent.com/pypi/simple
@@ -26,14 +34,14 @@ You should consider upgrading via the 'pip install --upgrade pip' command.
 
 ## 基本用法
 用转化一段简单的 markdown 字符串为例。
-```
+```python
 import markdown
 s = "## hell-world"
 print(markdown.markdown(s))
 ```
 运行效果如下。
 
-```
+```python
 python3 main.py
 '<h2>hell-world</h2>'
 ```
@@ -45,7 +53,8 @@ markdown 这个库的生态比较好，一些常用的功能它自己就解决�
 
 ## markdown.extensions.toc
 在上面的例子中，我们看到 markdown 虽然格式化了标题(h2)但是不没能自动生成目录，`markdown.extensions.toc`就能自动为文章的标题生成目录。
-```
+
+```python
 # 给 markdown 加上 [TOC] 标记
 s="""[TOC]
 ## python
@@ -61,7 +70,7 @@ print(markdown.markdown(s,extensions=['markdown.extensions.toc']))
 
 运行后的输出如下。
 
-```
+```python
 <div class="toc">
     <ul>
         <li><a href="#python">python</a></li>
@@ -80,13 +89,11 @@ print(markdown.markdown(s,extensions=['markdown.extensions.toc']))
 
 看只是加了一个简单的 `extensions=['markdown.extensions.toc']` 就实现了目录功能。
 
-___
 
 ## markdown.extensions.fenced\_code
-
 markdown.extensions.fenced\_code 为 markdown 加上格式化代码的功能。
 
-```
+```python
 s="""
 # 请把 . 号换成 ` 号，这里不方便书写
 ...sql
@@ -98,20 +105,17 @@ print(markdown.markdown(s,extensions=['markdown.extensions.toc','markdown.extens
 
 输出如下。
 
-```
+```python
 python3 main.py
 
 <pre><code class="sql">select 1 as a;
 </code></pre>
 ```
 
-___
-
 ## markdown.extensions.tables
-
 `markdown.extensions.tables` 可以用来解析表格。
 
-```
+```python
 s="""|**name**|**age**|
 |---|---|
 |tim| 16|
@@ -121,7 +125,7 @@ print(markdown.markdown(s,extensions=['markdown.extensions.toc','markdown.extens
 ```
 输出如下。
 
-```
+```python 
 python3 main.py
 
 <table>
@@ -150,7 +154,7 @@ ___
 
 可以看到`markdown.extensions.tables`解析出来的 html 是不带样式的，那怎么加上样式呢？我们可以自定义拓展呀。
 
-```
+```python 
 from markdown import extensions
 from markdown.treeprocessors import Treeprocessor
 
@@ -195,7 +199,7 @@ print(markdown.markdown(s,extensions=['markdown.extensions.toc','markdown.extens
 
 输出如下。
 
-```
+```python 
 python3 main.py
 
 # 看 class 样式加上去了。
